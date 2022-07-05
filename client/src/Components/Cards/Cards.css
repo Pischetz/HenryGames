@@ -1,0 +1,50 @@
+.card{
+    position: relative;
+    aspect-ratio: 5/5;
+    width: 18%;
+    min-width: 150px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: black;
+    max-width: 300px;
+}
+
+.gameImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    border-radius: 10px;
+}
+
+.gameDescription{
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    transition: 0.4s ease;
+    border-radius: 10px;
+    line-height: 1em;
+}
+
+.card:hover .gameDescription{
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+-webkit-backdrop-filter: blur(6.6px);
+border: 1px solid rgba(255, 255, 255, 0.31);
+}
+
+@media only screen and (max-width: 800px){
+    .card h3{
+        font-size: 15px;
+    }
+}
+
+
+
+

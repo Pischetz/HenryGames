@@ -1,0 +1,150 @@
+.filters{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter{
+    /* background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+-webkit-backdrop-filter: blur(6.6px);
+border: 1px solid rgba(255, 255, 255, 0.31); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    background: inherit;
+    background-color:transparent;
+    border-radius: 15px;
+    border-style: inset;
+    border-width: thin;
+    height: 30px;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+/* .filter:hover {
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+-webkit-backdrop-filter: blur(6.6px);
+border: 1px solid rgba(255, 255, 255, 0.31);
+
+} */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  transition: ease 0.5s;
+  transition: width 0s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    opacity: 1;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+-webkit-backdrop-filter: blur(6.6px);
+border: 1px solid rgba(255, 255, 255, 0.31);
+    z-index: 1;
+    width: 100px;
+    border-radius: 0px 0px 15px 15px;
+  }
+
+  .dropdown-content p {
+    color: black;
+    text-decoration: none;
+    display: block;
+  }
+
+
+.dropdown:hover .dropdown-content {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown:hover .filter {
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+-webkit-backdrop-filter: blur(6.6px);
+border: 1px solid rgba(255, 255, 255, 0.31);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.dropdown input{
+    margin: auto;
+    width: 100%;
+    height: 20px;
+    display: inline;
+    border-radius: 0px;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dropdown input:checked{
+    color: purple;
+}
+
+.dropdown input:before {
+	content: attr(label);
+	display:inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.genre{
+    margin: -3px;
+    padding: 0px;
+}
+
+
+
+@media only screen and (max-width: 800px){
+    .filters{
+        width: 95%;
+    }
+    .filter{
+        width: 100%;
+        max-width: 100px;
+    }
+    .dropdown-content{
+        width: 100%;
+        max-width: 100px;
+    }
+    .dropdown{
+        min-width: 100px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .filters{
+        width: 95%;
+    }
+    .filter{
+        width: 100%;
+        max-width: 75px;
+    }
+    .dropdown-content{
+        width: 100%;
+        max-width: 75px;
+    }
+    .dropdown{
+        min-width: 75px;
+    }
+    .dropdown-content{
+        font-size: 10px;
+    }
+}

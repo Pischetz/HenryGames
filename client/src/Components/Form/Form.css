@@ -1,0 +1,98 @@
+.form{
+    margin: auto;
+    max-width: 800px;
+    min-width: 600px;
+    background: rgba(255, 255, 255, 0.06);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(2.1px);
+-webkit-backdrop-filter: blur(2.1px);
+border: 1px solid rgba(255, 255, 255, 0.17);
+}
+
+.labels{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.form input{
+    width: 100%;
+    background: inherit;
+    background-color:transparent;
+    border-radius: 20px;
+    border-style: inset;
+    border-width: thin;
+    height: 20px;
+    color: antiquewhite;
+}
+
+.form textarea{
+    resize: none;
+    width: 100%;
+    background: inherit;
+    background-color:transparent;
+    border-style: inset;
+    border-width: thin;
+    height: 90px;
+}
+
+.genresChecks:before {
+	content: attr(label);
+	display:inline-block;
+	text-align: center;
+	width: 100%;
+}
+
+.genresChecks{
+    width: 10px;
+    display: inline;
+    border-radius: 0px;
+    -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+    font-size: 10px;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.genresChecks:checked{
+    color: black;
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+-webkit-backdrop-filter: blur(6.6px);
+border: 1px solid rgba(255, 255, 255, 0.31);
+    border-radius: 10px;
+}
+
+.genresDiv{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.genresDiv input{
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    width: 75px;
+    height: auto;
+}
+
+.formContainer{
+    display: flex;
+    justify-content:space-evenly;
+}
+
+.leftContainer{
+    width: 50%;
+}
+
+.rightContainer{
+    width: 50%;
+}
