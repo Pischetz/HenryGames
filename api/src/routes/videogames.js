@@ -76,7 +76,12 @@ videogamesRouter.get('/', async(req,res)=>{
                     }  
                 })
             }
-            res.json(aux)
+            //
+            if(!aux.length){
+                res.json([{msg: 'No Games Found'}])
+            }else{
+                res.json(aux)
+            }
         }
         else{
             //EN EL CASO DE QUE NO HAYA QUERY TRAEMOS TODOS LOS JUEGOS DE LA DB

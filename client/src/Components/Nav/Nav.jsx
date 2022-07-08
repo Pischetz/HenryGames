@@ -17,5 +17,17 @@ export default function Nav(){
         <AiOutlineForm/>
         </div>
         </Link>
+        {/* <div className='linksContainer'>
+        <div>
+        <Link to={'/videogames'} className='links'>
+            <h3>Home</h3>
+        </Link>
+        </div>
+        <div >
+        <Link to={'/create'} className='links'>
+            <h3>Create</h3>
+        </Link>
+        </div>
+        </div> */}
     </div>
 }

@@ -18,6 +18,7 @@ border: 1px solid rgba(255, 255, 255, 0.17);
     width: 300px;
     align-items: flex-start;
     margin-bottom: 10px;
+    transition: ease 1s;
 }
 
 .form input{
@@ -28,6 +29,10 @@ border: 1px solid rgba(255, 255, 255, 0.17);
     border-style: inset;
     border-width: thin;
     height: 20px;
+    color: antiquewhite;
+}
+
+.form textarea{
     color: antiquewhite;
 }
 
@@ -90,9 +95,50 @@ border: 1px solid rgba(255, 255, 255, 0.31);
 }
 
 .leftContainer{
+    display: flex;
+    flex-direction: column;
     width: 50%;
+    transition: ease 1s;
 }
 
 .rightContainer{
     width: 50%;
+}
+
+.errors{
+    color: red;
+    font-size: x-small;
+}
+
+.smallInputs{
+    margin: auto;
+    display: flex;
+    width: 300px;
+}
+
+.smallInputs label{
+    width: 45%;
+}
+
+.smallInputs input{
+    text-align: center;
+}
+
+
+
+@media only screen and (max-width: 800px){
+    .formContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .form{
+        max-width: 400px;
+        min-width: 300px;
+    }
+    .rightContainer{
+        width: auto;
+    }
+    .leftContainer{
+        width: auto;
+    }
 }

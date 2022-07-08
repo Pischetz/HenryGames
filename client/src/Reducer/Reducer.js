@@ -68,6 +68,12 @@ export default function rootReducer(state = initialState, action){
                 ...state,
                 genresFilter: action.payload
             }
+        case 'CLEAR_ALL_GAMES':
+            return{
+                ...state,
+                games: action.payload,
+                gamesByName: action.payload
+            }
         default:
             return state
     }

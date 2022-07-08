@@ -42,13 +42,13 @@ function Filtrado(props){
 
     return <div className="filters">
         <div className='dropdown'>
-            <span className='filter'>Generos</span>
+            <span className='filter'>Genres</span>
             <div className='dropdown-content'> 
                 {genres.map(genre => {return <div className='genre' key={genre.Id}><input type={'checkbox'} key={genre.name} label={genre.name} value={genre.name} name='genres' onChange={genreHandler}/></div>})}
             </div>
         </div>
         <div className='dropdown'>
-            <span className='filter'>Creación</span>
+            <span className='filter'>Creation</span>
             <div className='dropdown-content'>
                 <input label={'All'} value='all' type={'radio'} name='creation' checked={creationFilter === 'all'} onChange={creationHandler}/>
                 <input label='Created' value='created' type={'radio'} name='creation' checked={creationFilter === 'created'} onChange={creationHandler}/>
@@ -56,7 +56,7 @@ function Filtrado(props){
             </div>
         </div>
         <div className='dropdown'>
-        <span className='filter'>Nombre</span>
+        <span className='filter'>Name</span>
             <div className='dropdown-content'>
                 <input label='None' value='none' type={'radio'} name='name' checked={alfabeticalFilter === 'none'} onChange={nameHandler}/>
                 <input label='A-Z' value='a-z' type={'radio'} name='name' checked={alfabeticalFilter === 'a-z'} onChange={nameHandler}/>
@@ -71,6 +71,7 @@ function Filtrado(props){
                 <input label='0-5' value='5-0' type={'radio'} name='rating' checked={ratingFilter === '5-0'} onChange={ratingHandler}/>
             </div>
         </div>
+        
     </div>
 }
 

@@ -90,3 +90,9 @@ export function setGenres(genres){
         dispatch({type: 'FILTER_BY_GENRE', payload: genres})
     }
 }
+
+export function clearAllGames(){
+    return function(dispatch){
+        dispatch({type: 'CLEAR_ALL_GAMES', payload: []})
+    }
+}

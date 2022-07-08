@@ -40,7 +40,7 @@ export default function BotonesPaginado(props){
 
 
     return <div>
-        <button onClick={handlePrevious}>&lt;---</button>
+        <button onClick={handlePrevious} className='next-before'>&lt;</button>
         {pages.map(num => {
             if(num === page){
                 return <button key={num} className={'actual botoncito'} >{num}</button>
@@ -48,6 +48,6 @@ export default function BotonesPaginado(props){
                 return <button key={num} className={'botoncito'} onClick={handlePage} value={num}>{num}</button>
             }
         })}
-        <button onClick={handleNext}>---&gt;</button>
+        <button onClick={handleNext} className='next-before'>&gt;</button>
     </div>
 }

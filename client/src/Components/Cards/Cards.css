@@ -9,6 +9,29 @@
     max-width: 300px;
 }
 
+.cardGenres{
+    display: flex;
+    flex-direction: column;
+    line-height: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.cardGenres h5{
+    margin: 0px;
+}
+
+.cardGenres p{
+    margin: 5px;
+}
+
+.infoPosition{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30%;
+    height: auto;
+}
+
 .gameImg{
     width: 100%;
     height: 100%;
@@ -28,6 +51,11 @@
     transition: 0.4s ease;
     border-radius: 10px;
     line-height: 1em;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
 }
 
 .card:hover .gameDescription{
@@ -39,9 +67,31 @@
 border: 1px solid rgba(255, 255, 255, 0.31);
 }
 
-@media only screen and (max-width: 800px){
+.moreInfo{
+    margin-top: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.moreInfo:hover{
+    color: rgb(60, 60, 60);
+}
+
+@media only screen and (max-width: 1200px){
     .card h3{
         font-size: 15px;
+    }
+    .cardGenres p{
+        font-size: 12px;
+    }
+    .infoPosition{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20%;
+    }
+    .moreInfo{
+        margin-top: 5%;
+        font-size: 10px;
     }
 }
 

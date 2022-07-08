@@ -10,11 +10,13 @@ export default function Cards(props){
         <img src={props.image? props.image: defaultImg} alt='' className='gameImg'/>
         <div className='gameDescription'>
             <h3>{props.name}</h3>
+            <div className='infoPosition'>
             <div className='cardGenres'>
-            <h5>Genres</h5>
-            {genres.join(', ')}
+            <h5>Genres:</h5>
+            <p>{genres.join(', ')}</p>
             </div>
-            <p><Link to={`/videogames/${props.Id}`}>More Info</Link></p>
+            <p><Link to={`/videogames/${props.Id}`} className={'moreInfo'}>More Info</Link></p>
+            </div>
         </div>
     </div>
 }

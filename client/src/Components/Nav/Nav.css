@@ -17,6 +17,11 @@
     font-size: larger;
     transition: linear 1s;
     margin-right: 80px;
+
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
 }
 
 .nav:hover{
@@ -35,4 +40,26 @@
 
 .nav:hover .Icons{
     color: yellow;
+}
+
+
+.linksContainer{
+    display: flex;
+    width: 300px;
+    align-content:space-between;
+    justify-content: space-evenly;
+}
+
+.links{
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    color: inherit;
+    transition: linear 1s;
+}
+
+.links h3{
+    font-weight:normal;
 }

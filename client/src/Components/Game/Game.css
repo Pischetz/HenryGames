@@ -16,6 +16,8 @@ border: 1px solid rgba(255, 255, 255, 0.17);
 }
 
 .info{
+    display: flex;
+    flex-direction: column;
     width: 38%;
     margin-right: 2%;
     background: rgba(255, 255, 255, 0.18);
@@ -26,8 +28,10 @@ border: 1px solid rgba(255, 255, 255, 0.31);
     border-radius: 10px;
 }
 
-.info h1{
-    font-size: 10px;
+.info h2{
+    font-size: 2.1vw;
+    font-weight: 800;
+    color: black;
 }
 
 .imageDiv{
@@ -42,13 +46,35 @@ border: 1px solid rgba(255, 255, 255, 0.31);
 
 .description{
     margin: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
     background: rgba(255, 255, 255, 0.18);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.6px);
 -webkit-backdrop-filter: blur(6.6px);
 border: 1px solid rgba(255, 255, 255, 0.31);
     border-radius: 10px;
-    width: 96%;
+    width: 94%;
+}
+
+.specificInfo{
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    height: 96%;
+}
+
+.specificInfo h4{
+    align-self: flex-start;
+    margin: 0px;
+    margin-left: 10%;
+    font-size: 1.4vw;
+    color: black;
+    font-weight: 600;
+}
+.specificInfo p{
+    margin: 5px;
+    font-size: 1.2vw;
 }
 
 @media only screen and (max-width: 800px) {
@@ -64,5 +90,14 @@ border: 1px solid rgba(255, 255, 255, 0.31);
         width: 96%;
         margin-right: 2%;
         margin-left: 2%;
+    }
+    .info h2{
+        font-size: x-large;
+    }
+    .specificInfo h4{
+        font-size: large;
+    }
+    .specificInfo p{
+        font-size: medium;
     }
 }

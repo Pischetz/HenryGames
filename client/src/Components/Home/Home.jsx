@@ -14,9 +14,16 @@ function Home(props){
     const [maxPage, setMaxPage] = useState(0)
     const [search, setSearch] = useState('')
     const [searching, setSearching] = useState('')
+    const [error, setError] = useState(false)
     
 
     let {games, getGames, gamesByName, clearGamesByName, alfabeticalOrder, ratingOrder, createdBy, genresFilter} = props
+
+    useEffect(() => {
+        if(!games.length){
+            getGames()  
+        }
+    }, [games, getGames])
 
     useEffect(() => {
         //FUNCION PARA BUSCADOR DINAMICO
@@ -29,13 +36,10 @@ function Home(props){
         if(!search.length){
             //SI NO HAY BUSQUEDA
             setSearching('')
+            setError(false)
             //LIMPIAMOS SI EXISTIERAN JUEGOS DE LA ULTIMA BUSQUEDA
             if (gamesByName.length){
                 clearGamesByName()
-            }
-            //SI NO SE ENCUENTRAN JUEGOS SE PIDEN AL BACK
-            if(!games.length){
-                getGames()  
             }
             //SI HAY JUEGO FILTRAMOS, PAGINAMOS Y MOSTRAMOS
             if(games.length){
@@ -109,8 +113,13 @@ function Home(props){
                 setMaxPage(0)
                 setSearching(search)
                 compare(search)
+            }else if(gamesByName.length && gamesByName[0].msg){
+                console.log('hola')
+                setGames([])
+                setError(true)
             }else if (gamesByName.length){
                 let aux = [...gamesByName]
+                console.log(aux)
                 //FILTRADO POR CREACION
                 if(createdBy !== 'all'){
                     if(createdBy === 'created'){
@@ -198,12 +207,15 @@ function Home(props){
         setSearch(e.target.value)
     }
 
+
+
     return<div className='home'>
         <div className='searchAndFilters'>
-        <input placeholder='Buscar' value={search} onChange={handleChange} className={'buscador'}/>
+        <input placeholder='Search...' value={search} onChange={handleChange} className={'buscador'}/>
         <Filtrado/>
         </div>
         <div className='cartitas'>
+        {error? <div className='noGamesFound'><h1>No Games Found</h1></div> : null}
         {games.length? 
         gamesToShow.map(game => {return <Cards key={game.Id} image={game.image} Id={game.Id} name={game.name} Genres={game.Genres}/>}) 
         : <div className='homeLoading'><Spinner/></div>}
